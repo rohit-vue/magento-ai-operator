@@ -1,0 +1,59 @@
+# ===================================================================
+#   Comprehensive .gitignore for a Python/FastAPI + Next.js Project
+# ===================================================================
+
+# === Secrets ===
+# Never commit environment variables or secrets.
+# The !.env.example is a common pattern to allow a template file.
+*.env
+.env.*
+!.env.example
+
+# === Python / Backend Specific (inside /backend) ===
+# Virtual environment folder
+backend/venv/
+
+# Python cache files
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary runtime uploads
+backend/temp_uploads/
+
+# Other common Python ignores
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# === Node.js / Frontend Specific (inside /frontend-nextjs) ===
+# Dependency directories
+frontend-nextjs/node_modules/
+
+# Next.js build output
+frontend-nextjs/.next/
+frontend-nextjs/out/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js auto-generated TypeScript file
+frontend-nextjs/next-env.d.ts
+
+# === IDE / Editor Configuration ===
+# VS Code
+.vscode/
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
+# === OS Generated Files ===
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
