@@ -1,5 +1,9 @@
 // src/app/layout.js
+import { Inter } from 'next/font/google';
 import './globals.css';
+
+// Configure the Inter font
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: "Magento AI Operator",
@@ -8,10 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // By adding suppressHydrationWarning here, we tell React to ignore
-    // mismatches caused by browser extensions on this element and its children (like <body>).
     <html lang="en" suppressHydrationWarning={true}>
-      <body>{children}</body>
+      {/* Apply the font class to the body */}
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
