@@ -6,7 +6,7 @@ import axios from 'axios';
 import { FaPaperPlane, FaPlus, FaFileUpload, FaUser, FaRobot, FaClipboardList, FaComments, FaStore } from 'react-icons/fa';
 
 // --- API Endpoints ---
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
 const CHAT_API_URL = `${API_BASE_URL}/api/v1/chatbot/chat`;
 const UPLOAD_API_URL = `${API_BASE_URL}/api/v1/files/upload`;
 const CONNECT_API_URL = `${API_BASE_URL}/api/v1/auth/connect`;
